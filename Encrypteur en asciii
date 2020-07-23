@@ -1,0 +1,19 @@
+#coding:utf-8
+
+def get(__s, __n):
+    return ' '.join(str(ord(str(element))+__n) for element in __s)
+
+def main():
+    _s = input("Message : ").lower()
+
+    while True:
+        try:
+            _n = int(eval(input("Clé : ")))
+            break
+        except:
+            print(colored("Erreur", "red"))
+            continue
+
+    print(colored(get(_s, _n), "green"))
+
+main()
